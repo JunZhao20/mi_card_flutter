@@ -14,14 +14,23 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         // SafeArea allows widgets to within a border
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.only(left: 30.0),
-            padding: EdgeInsets.all(20.0),
-            color: Colors.white,
-            child: Text('Text'),
-          ),
+          child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Container(
+                    width: 30.0, color: Colors.white, child: Text('Con 1')),
+                SizedBox(
+                  width: 30.0,
+                ),
+                Container(
+                  color: Colors.blue,
+                  child: Text('Con 2'),
+                ),
+                Container(
+                  color: Colors.red,
+                  child: Text('Con 3'),
+                )
+              ]),
         ),
       ),
     );
