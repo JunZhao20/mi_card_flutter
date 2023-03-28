@@ -14,43 +14,72 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         // SafeArea allows widgets to within a border
         body: SafeArea(
-          child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    width: 100,
-                    height: double.infinity,
-                    color: Colors.red,
-                    child: Text('Con 1')),
-                SizedBox(
-                  width: 65.0,
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage("images/IMG_2820.JPG"),
+            ),
+            Text(
+              "Jun Zhao",
+              style: TextStyle(
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Alkatra',
+                  color: Colors.white),
+            ),
+            Text(
+              "FLUTTER DEVELOPER",
+              style: TextStyle(
+                  fontSize: 20.0,
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.white70),
+            ),
+            SizedBox(
+              height: 10.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.teal.shade100,
+              ),
+            ),
+            Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+447400950089',
+                    style: TextStyle(
+                        fontFamily: 'Alkatra',
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.teal),
+                  ),
+                )),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal,
                 ),
-                Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
-                        width: 100.0,
-                        height: 100.0,
-                        color: Colors.yellow,
-                        child: Text('Con 2'),
-                      ),
-                      Container(
-                          width: 100.0,
-                          height: 100.0,
-                          color: Colors.yellow,
-                          child: Text('Con 2')),
-                    ]),
-                SizedBox(
-                  width: 65.0,
+                title: Text(
+                  'Junzhao@gmail.com',
+                  style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'Alkatra',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.teal),
                 ),
-                Container(
-                  height: double.infinity,
-                  width: 100.0,
-                  color: Colors.blue,
-                  child: Text('Con 3'),
-                )
-              ]),
-        ),
+              ),
+            ),
+          ],
+        )),
       ),
     );
   }
